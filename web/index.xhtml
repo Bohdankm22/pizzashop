@@ -2,32 +2,25 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:b="http://bootsfaces.net/ui"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core">
+      xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets"
+>
 <h:head>
     <title>Pizzatron</title>
     <h:outputStylesheet library="css" name="bootstrap.css"/>
+    <h:outputScript library="js" name="bootstrap.js"/>
 </h:head>
 <h:body>
-
-    <b:navBar brand="Brand" brandHref="#">
-        <b:navbarLinks>
-            <b:navLink value="Link" href="#"/>
-            <b:navLink value="Link" href="#"/>
-        </b:navbarLinks>
-    </b:navBar>
-
-    <div class="container">
-        <h3>Choose your dinner!</h3>
+    <div class="jumbotron text-center">
+        <h1>Pizza shop</h1>
+        <p>Choose your dinner with us!</p>
     </div>
-
 
     <div class="container">
         <div class="table">
             <div class="row">
                 <div class="col-2">
-                    <h:outputLabel styleClass="label">First name</h:outputLabel>
+                    <h:outputLabel styleClass="label label-primary">First name</h:outputLabel>
                 </div>
                 <div class="col-3">
                     <h:inputText id="userName" styleClass=""/>
@@ -36,7 +29,7 @@
             <br/>
             <div class="row">
                 <div class="col-2">
-                    <h:outputLabel styleClass="label">Last name</h:outputLabel>
+                    <h:outputLabel styleClass="label label-primary">Last name</h:outputLabel>
                 </div>
                 <div class="col-3">
                     <h:inputText id="userName2" styleClass=""/>
@@ -45,7 +38,7 @@
             <br/>
             <div class="row">
                 <div class="col-2">
-                    <h:outputLabel styleClass="label">City</h:outputLabel>
+                    <h:outputLabel styleClass="label label-primary">City</h:outputLabel>
                 </div>
                 <div class="col-3">
                     <h:inputText id="city" styleClass=""/>
@@ -54,7 +47,7 @@
             <br/>
             <div class="row">
                 <div class="col-2">
-                    <h:outputLabel styleClass="label">Postal code</h:outputLabel>
+                    <h:outputLabel styleClass="label label-primary">Postal code</h:outputLabel>
                 </div>
                 <div class="col-3">
                     <h:inputText id="postal" styleClass=""/>
@@ -63,52 +56,52 @@
             <br/>
             <div class="row">
                 <div class="col-2">
-                    <h:outputLabel styleClass="label">Phone number</h:outputLabel>
+                    <h:outputLabel styleClass="label label-primary">Phone number</h:outputLabel>
                 </div>
                 <div class="col-3">
-                    <h:inputText id="userName3" styleClass=""/>
+                    <h:inputText id="userName3" styleClass="text-input"/>
                 </div>
             </div>
             <br/>
             <div class="row">
                 <div class="col-2">
-                    <h:outputLabel styleClass="label">Province</h:outputLabel>
+                    <h:outputLabel styleClass="label label-primary">Province</h:outputLabel>
                 </div>
                 <div class="col-3">
                     <h:selectOneMenu styleClass="dropdown">
-                        <f:selectItem itemValue="Ontario" />
-                        <f:selectItem itemValue="Quebec" />
-                        <f:selectItem itemValue="British Columbia" />
-                        <f:selectItem itemValue="Alberta" />
-                        <f:selectItem itemValue="Nova Scotia" />
-                        <f:selectItem itemValue="Saskachewan" />
-                        <f:selectItem itemValue="Nefaundler and Labrador" />
-                        <f:selectItem itemValue="Manitoba" />
-                        <f:selectItem itemValue="New Brunswick" />
-                        <f:selectItem itemValue="Prince Edward Island" />
+                        <f:selectItem itemValue="Ontario"/>
+                        <f:selectItem itemValue="Quebec"/>
+                        <f:selectItem itemValue="British Columbia"/>
+                        <f:selectItem itemValue="Alberta"/>
+                        <f:selectItem itemValue="Nova Scotia"/>
+                        <f:selectItem itemValue="Saskachewan"/>
+                        <f:selectItem itemValue="Nefaundler and Labrador"/>
+                        <f:selectItem itemValue="Manitoba"/>
+                        <f:selectItem itemValue="New Brunswick"/>
+                        <f:selectItem itemValue="Prince Edward Island"/>
                     </h:selectOneMenu>
                 </div>
             </div>
             <br/>
             <div class="row">
                 <div class="col-2">
-                    <h:outputLabel styleClass="label">Food and Drinks</h:outputLabel>
+                    <h:outputLabel styleClass="label label-primary">Food and Drinks</h:outputLabel>
                 </div>
                 <div class="col-3">
                     <h:selectManyCheckbox>
-                        <f:selectItem itemValue="Pizza" />
-                        <f:selectItem itemValue="Sandwich" />
-                        <f:selectItem itemValue="Beer" />
-                        <f:selectItem itemValue="Water" />
-                        <f:selectItem itemValue="Chocolate" />
-                        <f:selectItem itemValue="Pineapple" />
+                        <f:selectItem itemValue="Pizza"/>
+                        <f:selectItem itemValue="Sandwich"/>
+                        <f:selectItem itemValue="Beer"/>
+                        <f:selectItem itemValue="Water"/>
+                        <f:selectItem itemValue="Chocolate"/>
+                        <f:selectItem itemValue="Pineapple"/>
                     </h:selectManyCheckbox>
                 </div>
             </div>
             <br/>
             <div class="row">
                 <div class="col-2">
-                    <h:outputLabel styleClass="label">Delivery type</h:outputLabel>
+                    <h:outputLabel styleClass="label label-primary">Delivery type</h:outputLabel>
                 </div>
                 <div class="col-3">
                     <h:selectOneRadio styleClass="radio">
@@ -120,17 +113,16 @@
             <br/>
             <div class="row">
                 <div class="col-2">
-                    <h:outputLabel styleClass="label">Comments</h:outputLabel>
+                    <h:outputLabel styleClass="label label-primary">Comments</h:outputLabel>
                 </div>
                 <div class="col-3">
-                    <h:inputTextarea styleClass="text-area" />
+                    <h:inputTextarea styleClass="text-area"/>
                 </div>
             </div>
             <br/>
-            <h:button styleClass="button" value="Submit"/>
+            <h:button styleClass="btn btn-success" value="Submit"/>
         </div>
     </div>
-    <br/>
 
     <br/>
 
